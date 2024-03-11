@@ -1,4 +1,4 @@
-userOption = input("Que mano eligio? (piedra, papel o tijeras) ")
+userOption = input("Choose between Rock, Paper or Scissors: ")
 
 
 def optionToLower(userOption):
@@ -7,24 +7,24 @@ def optionToLower(userOption):
 
 def pcOption():
   import random
-  pcOption = random.choice(["piedra", "papel", "tijeras"])
+  pcOption = random.choice(["rock", "paper", "scissors"])
   return pcOption
 
 def checkOpcion(userOptionLower, pcOption):
   if userOptionLower == pcOption:
-    return "Empate"
-  elif userOptionLower == "piedra" and pcOption == "tijeras":
-    return "Gano el Usuario con {} contra {}".format(userOptionLower, pcOption)
-  elif userOptionLower == "piedra" and pcOption == "papel":
-    return "Gano el PC con {} contra {}".format(pcOption, userOptionLower)
-  elif userOptionLower == "papel" and pcOption == "tijeras":
-    return "Gano el PC con {} contra {}".format(pcOption, userOptionLower)
-  elif userOptionLower == "papel" and pcOption == "piedra":
-    return "Gano el Usuario con {} contra {}".format(userOptionLower, pcOption)
-  elif userOptionLower == "tijeras" and pcOption == "piedra":
-    return "Gano el PC con {} contra {}".format(pcOption, userOptionLower)
+    return ""
+  elif userOptionLower == "rock" and pcOption == "scissors":
+    return "User wins with {} vs {}".format(userOptionLower, pcOption)
+  elif userOptionLower == "rock" and pcOption == "paper":
+    return "PC wins with {} vs {}".format(pcOption, userOptionLower)
+  elif userOptionLower == "paper" and pcOption == "scissors":
+    return "PC wins with {} vs {}".format(pcOption, userOptionLower)
+  elif userOptionLower == "paper" and pcOption == "rock":
+    return "User wins with {} vs {}".format(userOptionLower, pcOption)
+  elif userOptionLower == "scissors" and pcOption == "rock":
+    return "PC wins with {} vs {}".format(pcOption, userOptionLower)
   else:
-    return "Gano el Usuario con {} contra {}".format(userOptionLower, pcOption)
+    return "User wins with {} vs {}".format(userOptionLower, pcOption)
   
 returned = optionToLower(userOption)
 pcOption = pcOption()
