@@ -14,10 +14,9 @@
 # Since "d" does not appear in order, it can be at any position in the returned string. "dcba",
 # "cdba", "cbda" are also valid outputs.
 
-order = input("Enter the order: ")
-s = input("Enter the string: ")
 
-
+# order = input("Enter the order: ")
+# s = input("Enter the string: ")
 def entries(order: str, s: str):
     orderSorted = sorted(order, s, reverse=False)
     return orderSorted
@@ -25,21 +24,18 @@ def entries(order: str, s: str):
 
 # Input:  order = "cba", s = "abcd"
 # Output:  "cbad"
-ordenada = "".join(sorted(s))
-sorted_s=""
-print(ordenada)
-for char in s:
-    if s in order:
-        c = "".join(char)
-        print(c)
-# if order in ordenada:
-#     char = sorted(order)
-#     print("char", char)
-#     sorted_s += char * 1
-#     print(sorted_s)
-# else:
-#     print("order: {} s: {} ordenada: {}".format(order, s, ordenada))
+# s = "abcd"
+order = "cba"
+s = "abcd"
 
-string = ['ba', 'ca', 'av']
-string.sort() # Ordena los str
-print(string)
+index = {char: index for index, char in enumerate(s)}
+list_s = list(index.keys())
+list_order = list(order)
+
+for char in s:
+  iterable = 0
+  if char == list_s[1] and char == list_order[1]:
+    print(char)
+  else:
+    print("No char")
+  print(iterable)
