@@ -18,7 +18,7 @@ steps = 0
 while c0 != 1:
   # if its even
   if c0 % 2 == 0:
-    c0 = c0 / 2
+    c0 /= 2
     # print the number
     print(c0)
   else:
